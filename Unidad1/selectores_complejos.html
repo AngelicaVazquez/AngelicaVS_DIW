@@ -28,29 +28,17 @@
 			border: thin dotted #AC8159;
 		}
 
-		td[colspan="2"]
-		{
-			background-color: #234E54;
-		}
-		td[rowspan="2"]
+		td[colspan="2"], [rowspan="2"]
 		{
 			background-color: #234E54;
 		}
 
-		td[colspan="3"] 
-		{
-			background-color: #ACA759;
-		}
-		td[rowspan="3"]
+		td[colspan="3"], td[rowspan="3"]
 		{
 			background-color: #ACA759;
 		}
 
-		td[colspan="4"] 
-		{
-			background-color: #CEA885;
-		}
-		td[rowspan="4"]
+		td[colspan="4"], td[rowspan="4"]
 		{
 			background-color: #CEA885;
 		}
@@ -59,13 +47,24 @@
 		{
 			font-family: Verdana, Geneva, sans-serif;
 			color: #ad57be;
+			list-style-type: square;
 		}
-		li[id="pregunta3"]>.negrita
+		span.negrita
 		{
-			background-color: #e3fd71;
 			font-weight: bold;
 		}
+		#pregunta3>.negrita
+		{
+			background-color: #e3fd71;
+		}
 
+		.comentarios
+		{
+			border: thin dotted #AC8159;
+			font-style: italic;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
 	</style>
 </head>
 
