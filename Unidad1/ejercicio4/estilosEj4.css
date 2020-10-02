@@ -1,0 +1,57 @@
+table, td, th
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: bottom;
+    padding: 5px;
+}
+
+tr
+{
+    height: 3.7em;
+}
+
+.par td
+{
+    background-color: rgb(243, 242, 209);
+}
+
+.par:hover td
+{
+    background-color: rgb(255, 249, 80);
+}
+
+.cabecera
+{
+    background-image: url('imagenes/fondo_gris.gif');
+    background-position: top;
+}
+
+.euro
+{
+    background: url('imagenes/euro.png'), rgb(216, 243, 234);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.dolar
+{
+    background: url('imagenes/dolar.png'), rgb(216, 243, 234);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.libra
+{
+    background: url('imagenes/libra.png'), rgb(216, 243, 234);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.yen
+{
+    background: url('imagenes/yen.png'), rgb(216, 243, 234);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
