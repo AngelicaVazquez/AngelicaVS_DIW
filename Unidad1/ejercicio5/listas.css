@@ -6,6 +6,25 @@ h1 {
 	cursor: text;
 	text-shadow: 3px 3px 2px #789498;
 }
+
+ol {
+	counter-reset: list;
+	padding-left: 0em;
+  }
+  ol > li {
+	list-style: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background-color: #F9DDC3;
+	color: #6E431C;
+  }
+  ol > li:before {
+	content: counter(list, lower-alpha) ") ";
+	counter-increment: list;
+	font-size: 1.5em;
+	font-weight: bold;
+  }
+
 ul.redes li {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
