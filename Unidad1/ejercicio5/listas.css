@@ -25,6 +25,11 @@ ol {
 	font-weight: bold;
   }
 
+  ul > li
+  {
+	  list-style-image: url('./imgs/vineta_circle1.png');
+  }
+
 ul.redes li {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
