@@ -1,0 +1,40 @@
+*{
+    border: thin solid #442A5D;
+}
+
+
+.negrita{
+    display: block;
+}
+
+.elemLinea{
+    display: inline;
+}
+
+.elemLista{
+    display: list-item;
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 2em;
+}
+
+.elemNone{
+    display: none;
+}
+
+.bloqueenlinea{
+    display: inline-block;
+    height: 6em;
+    padding-right: 3em;
+}
+
+.elemCell{
+    display: table-cell;
+}
+
+.elemDesp{
+    position: relative;
+    right: 20px;
+    top: 20px;
+}
+/* Del resto hay que crear clases por cada párrafo, en función de la propiedad display */
