@@ -1,0 +1,12 @@
+.logoIES{
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    box-shadow: 10px 10px 2px #000000;
+}
+body{
+    background-image: url("../img/madrid.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
