@@ -1,0 +1,57 @@
+* {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+div.exterior p, div.exteriorgrande p {
+    background-color: #CEA885;
+}
+.exterior {
+    background-color: #789498;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.exteriorgrande {
+    background-color: #789498;
+    height: 200px;
+    width: 100px;
+    text-align: center;
+}
+.interior {
+    background-color: #755E8B;
+    text-align: center;
+    height: 50px;
+}
+#margen20 {
+
+}
+#margen2510 {
+
+}
+#margen25103 {
+
+}
+#margen25102 {
+
+}
+#margennegativosolo {
+
+}
+#margennegativo {
+
+}
+#margeninferiornegativo {
+
+}
+#dosprimera {
+
+}
+#dosprimerados {
+
+}
+#dossegunda {
+
+}
+#dossegundados {
+
+}
