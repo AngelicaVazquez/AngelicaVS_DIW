@@ -10,12 +10,14 @@ div.exterior p, div.exteriorgrande p {
     height: 100px;
     width: 100px;
     text-align: center;
+    margin: auto;
 }
 .exteriorgrande {
     background-color: #789498;
     height: 200px;
     width: 100px;
     text-align: center;
+    margin: auto;
 }
 .interior {
     background-color: #755E8B;
@@ -45,11 +47,15 @@ div.exterior p, div.exteriorgrande p {
 }
 #dosprimera {
 
+    margin: 20px;
+
 }
 #dosprimerados {
 
 }
 #dossegunda {
+
+    margin: 20px;
 
 }
 #dossegundados {
