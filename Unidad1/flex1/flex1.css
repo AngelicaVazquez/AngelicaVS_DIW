@@ -1,7 +1,6 @@
 .flex-container {
     background-color: aqua;
     width: 50%;
-    justify-content: space-between;
     align-content: flex-end;
     margin: 0.5rem;
   }
@@ -14,16 +13,17 @@
     text-align: center;
     line-height: 2rem;
     font-size: 15px;
-    margin: 0;
     margin-top: 3rem;
   }
 
   #flex-container1 {
     display: inline-flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   #flex-container2 {
     display: inline-flex;
     flex-direction: row-reverse;
+    justify-content: space-evenly;
   }
