@@ -1,0 +1,32 @@
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    width: 700px;
+}
+
+.flex-container > div {
+    padding: 5px;
+    background-color: #e6b57d;
+    border: black solid 1px;
+    width: 100px;
+    line-height: 45px;
+    font-size: 15px;
+    
+}
+
+.flex-container div:nth-child(1) {
+    order: 4;
+}
+.flex-container div:nth-child(2) {
+    order: 1;
+}
+.flex-container div:nth-child(3) {
+    flex-grow: 1;
+    order: 2;
+}
+.flex-container div:nth-child(4) {
+    flex-grow: 2;
+    order: 3;
+}
