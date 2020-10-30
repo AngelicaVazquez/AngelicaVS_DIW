@@ -5,6 +5,13 @@
     background-color: #f1f1f1;
     width: 700px;
 }
+.flex-container2 {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    width: 700px;
+}
 
 .flex-container > div {
     padding: 5px;
@@ -12,8 +19,15 @@
     border: black solid 1px;
     width: 100px;
     line-height: 45px;
+    font-size: 15px; 
+}
+.flex-container2 > div {
+    padding: 5px;
+    background-color: #0e9e92;
+    border: black solid 1px;
+    width: 150px;
+    line-height: 140px;
     font-size: 15px;
-    
 }
 
 .flex-container div:nth-child(1) {
@@ -29,4 +43,8 @@
 .flex-container div:nth-child(4) {
     flex-grow: 2;
     order: 3;
+}
+
+.flex-container2 div:nth-child(2) {
+    flex-grow: 3;
 }
