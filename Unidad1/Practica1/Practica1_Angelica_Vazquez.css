@@ -28,42 +28,96 @@ iframe {
   display:block;
   width:100%;
   border:none;
-  height:80vh;
+  height:85vh;
 }
 
-.footer {
-  height: 4vh;
-}
+
+/*
+    - Usar transition CSS
+    - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+
+*/
 
 /* HOME */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  height: 50%;
+  background-image: url("img/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+hr {
+  background-color: dodgerblue;
+  color: dodgerblue;
+  border-style: none;
+  border-radius: 2px;
+  height: 5px;
+  width: 25px;
+  margin-left: 0px;
+
+}
 
 .products {
-  overflow: hidden;
+  height: 50%;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.products > div {
+  height: 200px;
+  width: 160px;
+  margin-left: 100px;
+  margin-right: 100px;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.products > div > p {
+  transform: translateY(12em);
+}
+
+#price {
+  color: dodgerblue;
 }
 
 #product1 {
-  background-image: url("../img/1.jpg");
+  background-image: url("img/1.jpg");
 }
 #product2 {
-  background-image: url("../img/2.jpg");
+  background-image: url("img/2.jpg");
 }
 #product3 {
-  background-image: url("../img/3.jpg");
+  background-image: url("img/3.jpg");
 }
 #product4 {
-  background-image: url("../img/4.jpg");
+  background-image: url("img/4.jpg");
 }
 #product5 {
-  background-image: url("../img/5.jpg");
+  background-image: url("img/5.jpg");
 }
 #product6 {
-  background-image: url("../img/6.jpg");
+  background-image: url("img/6.jpg");
 }
 #product7 {
-  background-image: url("../img/7.jpg");
+  background-image: url("img/7.jpg");
 }
 #product8 {
-  background-image: url("../img/8.jpg");
+  background-image: url("img/8.jpg");
 }
 
 /* PRODUCTS */
