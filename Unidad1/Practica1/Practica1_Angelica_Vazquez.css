@@ -1,9 +1,10 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
   margin: 0;
+}
+
+@font-face {
+  font-family: pixieFont;
+  src: url("fonts/Rounded_Elegance.ttf");
 }
 
 /* ÍNDICE */
@@ -12,36 +13,43 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
 }
 
 .header a {
   color: #000000;
   text-align: center;
-  padding: 15px 30px;
+  margin: 5px 30px;
+  margin-top: 35px; 
   text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
+  font-weight: bolder;
+  font-size: 1rem;
+  display: inline-block;
+  height: 1rem;
+  font-family: pixieFont, Arial, Helvetica, sans-serif;
 }
 
 .header a:hover {
-  color: rgb(66, 146, 212);
+  color: rgb(24, 85, 134);
   transition-duration: 0.5s;
+}
+
+#logo {
+  width: 5rem;
+  height: 1.1rem;
+  display: block;
+  position: absolute;
+  left: 44.8%;
+  margin: 5px;
+  border-radius: 5%;
 }
 
 iframe {
   display:block;
   width:100%;
   border:none;
-  height:90vh;
+  height:92vh;
 }
-
-/*
-    - Usar transition CSS
-    - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
-    - Tooltip
-
-*/
 
 /* HOME */
 .flex-container {
@@ -62,14 +70,55 @@ iframe {
   background-position: center;
 }
 
-hr {
-  background-color: dodgerblue;
-  color: dodgerblue;
+.message {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 13rem;
+  width: 20rem;
+  overflow: hidden;
+  position: relative;
+  left: 10%;
+  top: 20%;
+}
+
+.message h4 {
+  font-family: pixieFont, Arial, Helvetica, sans-serif;
+  margin: 5px;
+  margin-left: 8px;
+  margin-bottom: 0;
+}
+.message p {
+  margin: 0;
+  padding: 8px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+#boton {
+  padding: 6px;
+  font-size: 10px;
+  color: white;
+  background-color: rgb(24, 85, 134);
   border-style: none;
-  border-radius: 2px;
-  height: 5px;
-  width: 25px;
-  margin-left: 0px;
+  border-radius: 6%;
+  margin: 5px;
+  margin-left: 8px;
+  margin-bottom: 0;
+}
+
+.blue {
+  color: rgb(24, 85, 134);
+}
+
+hr {
+  background-color: rgb(24, 85, 134);
+  color: rgb(24, 85, 134);
+  border-style: none;
+  border-radius: 20%;
+  height: 2px;
+  width: 50px;
+  margin-left: 10px;
+  margin-bottom: 0px;
 
 }
 
@@ -79,6 +128,20 @@ hr {
   position: relative;
   overflow-x: scroll;
   overflow-y: hidden;
+}
+
+#feat {
+  font-family: pixieFont, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.products p {
+  font-family: pixieFont, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bolder;
 }
 
 .products > div {
@@ -106,14 +169,13 @@ hr {
   background-position: left bottom;
 }
 
-
 .products > div > p {
   transform: translateY(15em);
   font-size: 12px;
 }
 
 #price {
-  color: dodgerblue;
+  color: rgb(24, 85, 134);
 }
 
 #product1 {
@@ -142,5 +204,66 @@ hr {
 }
 
 /* PRODUCTS */
+
+#headerProducts {
+  margin-left: 20px;
+}
+#titleProducts{
+  font-family: pixieFont, Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  margin-left: 9px;
+}
+
+.flexContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flexContainer div {
+  height: 14em;
+  width: 8em;
+  margin-left: 100px;
+  margin-right: 100px;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(24, 85, 134);
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: small;
+}
+
+#copy {
+  font-size: small;
+  background-color: rgb(24, 85, 134);
+  display: inline;
+  position: absolute;
+  left: 40%;
+  margin-bottom: 10px;
+  width: 170px;
+  height:20px;
+  box-shadow:10px 10px seagreen;  
+}
+
 /* ABOUT */
 /* CONTACT */
