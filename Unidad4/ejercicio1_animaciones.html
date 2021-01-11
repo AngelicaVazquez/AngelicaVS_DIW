@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Unidad 4. Ejercicio 1.</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            line-height: 2rem;
+        }
+        ul>li {
+            margin: 1.5rem;
+        }
+        ul>li:first-child {
+            background-color: yellow;
+            display: none;
+        }
+        ul>li:nth-child(2) {
+            background-color: purple;
+            display: none;
+        }
+        ul>li:nth-child(3) {
+            background-color: orangered;
+            display: none;
+        }
+        ul>li:nth-child(4) {
+            background-color: green;
+            display: none;
+        }
+    </style>
+    <script>
+        var myVar;
+        var elementos = document.getElementById("lista").getElementsByTagName("li");
+        var arrayElementos = Array.from(elementos);
+        console.log(arrayElementos);
+
+        function iniciar() {
+          myVar = setTimeout(() => alert("Hello"), 3000);
+          
+        }
+
+        function reset() {
+          clearTimeout(myVar);
+          iniciar();
+		}
+        window.onload=iniciar;
+    </script>
+</head>
+<body>
+    <H1>Pincha en cualquiera de los textos</H1>
+
+    <ul id="lista">
+        <li onclick="reset()">Primero</li>
+        <li onclick="reset()">Segundo</li>
+        <li onclick="reset()">Tercero</li>
+        <li onclick="reset()">Cuarto</li>
+    </ul>
+</body>
+</html>
