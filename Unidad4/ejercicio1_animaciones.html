@@ -13,36 +13,56 @@
         }
         ul>li:first-child {
             background-color: yellow;
-            display: none;
         }
         ul>li:nth-child(2) {
             background-color: purple;
-            display: none;
         }
         ul>li:nth-child(3) {
             background-color: orangered;
-            display: none;
         }
         ul>li:nth-child(4) {
             background-color: green;
+        }
+        .ocultar {
             display: none;
         }
     </style>
     <script>
         var myVar;
-        var elementos = document.getElementById("lista").getElementsByTagName("li");
-        var arrayElementos = Array.from(elementos);
-        console.log(arrayElementos);
+        var tiempo = 500;
 
         function iniciar() {
-          myVar = setTimeout(() => alert("Hello"), 3000);
-          
+          //recoger los nodos que quremos usar
+          var elementos = document.getElementById("lista").getElementsByTagName("li");
+
+          //crear array a partir de lista de nodos
+          var arrayElementos = Array.from(elementos);
+          console.log(arrayElementos);
+
+          //recorrer el array para mostrar los elementos
+          arrayElementos.forEach(element => {
+              myVar = setTimeout(() => element.classList.remove("ocultar"), tiempo);
+              tiempo=tiempo+500;
+          }); 
         }
 
         function reset() {
+          //lo mismo que en la otra función, creo que poniendo el script en el body podría haberlo evitado
+          var elementos = document.getElementById("lista").getElementsByTagName("li");
+          var arrayElementos = Array.from(elementos);
+          //"resetear" la variable tiempo porque sino lo que tarda en reiniciar la animación es en función de los nodos que le dio tiempo a mostar
+          var longitudActual = arrayElementos.length;
+          tiempo = tiempo - longitudActual*500;
+
+          arrayElementos.forEach(element => {
+            element.classList.add("ocultar");
+          });
           clearTimeout(myVar);
-          iniciar();
-		}
+          arrayElementos.forEach(element => {
+                myVar = setTimeout(() => element.classList.remove("ocultar"), tiempo);
+                tiempo=tiempo+500;
+          });
+        }
         window.onload=iniciar;
     </script>
 </head>
@@ -50,10 +70,10 @@
     <H1>Pincha en cualquiera de los textos</H1>
 
     <ul id="lista">
-        <li onclick="reset()">Primero</li>
-        <li onclick="reset()">Segundo</li>
-        <li onclick="reset()">Tercero</li>
-        <li onclick="reset()">Cuarto</li>
+        <li class="ocultar" onclick="reset()">Primero</li>
+        <li class="ocultar" onclick="reset()">Segundo</li>
+        <li class="ocultar" onclick="reset()">Tercero</li>
+        <li class="ocultar" onclick="reset()">Cuarto</li>
     </ul>
 </body>
 </html>
