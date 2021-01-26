@@ -6,6 +6,20 @@
     </style>
     <script>
         //loq tenga q ver con los atributos en connected callback. En el constructor metodo super...
+        //si creo un atributo n el html puedo acceder a él a traves de this.getAttribute("nombredelatributo"). Si quiero escribir directamente this.status; debería usar getter y setter. Puedo darle valores al atributo desde javascript por ejemplo; en HTML no tiene atributo especificado y en JS -> this.status = 1; lo q veremos en el navegador es que ha tomado el valor del atributo.
+        //Podemos inicializar el atributo al principio de nuestro código: status = 1; (sin this, es global)
+        //Lo suyo es añadir atributos con getters y setters
+        //Con un if vemos si get att es nulo o no
+        class Blink extends HTMLElement {
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                
+            }
+        }
+        customElements.define('wc-blink', Blink);
     </script>
 </head>
 <body>
