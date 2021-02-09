@@ -59,7 +59,7 @@ function reproducir(){
 function jugar(){
 
     var fondo = document.getElementsByClassName("fondo");
-    fondo.removeClass("blur",1000);
+    fondo.classList.add("noblur");
 /*
     do {
         reproducir();
