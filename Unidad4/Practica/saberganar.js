@@ -33,6 +33,11 @@ class Palabras extends HTMLElement {
     connectedCallback(){
     var timer = setInterval(() => {
       var div = document.createElement("div");
+      div.style.background="linear-gradient(grey,lightgrey)"
+      div.style.border="2px solid black";
+      div.style.borderRadius="5px";
+      div.style.margin="0.5rem";
+      div.style.padding="0.5rem"
       div.innerHTML = lista[indexAparicion];
       this.shadowRoot.appendChild(div);
       audioAparicion.play();
@@ -41,12 +46,7 @@ class Palabras extends HTMLElement {
         clearInterval(timer);
     }
     },500);
-
-
     }
-
-
-
   }
   
   window.customElements.define('lista-palabras', Palabras);
@@ -58,13 +58,15 @@ function reproducir(){
 
 function jugar(){
 
-    //mostrar las letras
-
+    var fondo = document.getElementsByClassName("fondo");
+    fondo.removeClass("blur",1000);
+/*
     do {
         reproducir();
         var respuesta = queryselector(input);
         check(respuesta);
     } while (aciertos==objetivo);
+    */
 }
 
 function check(){

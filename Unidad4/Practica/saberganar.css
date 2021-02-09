@@ -1,7 +1,66 @@
-body {
+@font-face {
+    font-family: principal;
+    src: url(./fonts/Coda_Caption/CodaCaption-ExtraBold.ttf);
+  }
+
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.fondo {
+    height: 100%;
+    margin: 0;
     background-image: url("./img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    transition: all 10s linear;
 }
+
+.blur {
+    filter: blur(20px);
+    transition: all 10s linear;
+}
+
+.menu {
+    background-color: rgb(88, 88, 88);
+    background-color: rgba(87, 87, 87, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 5rem;
+    text-align: center;
+  }
+input[type=submit] {
+    background: none;
+    margin: 2rem;
+    font-family: principal, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: white;
+    border: none;
+}
+
+#jugar {
+    cursor: pointer;
+}
+#instrucciones {
+    cursor: help;
+}
+
+.lista {
+    border-radius: 3px;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    z-index: 2;
+    text-align: center;
+  }
