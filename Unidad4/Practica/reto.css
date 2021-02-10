@@ -1,0 +1,58 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#fondo {
+    height: 100%;
+    margin: 0;
+    background-image: url("./img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+}
+.blur {
+    filter: blur(20px);
+}
+.lista {
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    z-index: 2;
+    text-align: center;
+  }
+
+  #timer {
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(black,grey,black);
+    border-radius: 5px;
+    border: 2px solid grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    text-align: center;
+  }
+  #respuesta {
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(black,grey,black);
+    border-radius: 5px;
+    border: 2px solid grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    bottom: 5%;
+    left: 20%;
+    z-index: 2;
+    text-align: center;
+  }
