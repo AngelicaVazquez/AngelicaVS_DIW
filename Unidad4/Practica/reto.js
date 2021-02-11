@@ -108,15 +108,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
   respuesta.addEventListener("input", function() {
     for(palabra in respuestas) {
       if(respuestas[palabra] == respuesta.value.toUpperCase()){
+        aciertos++;
+        if(aciertos<objetivo){
+          console.log(respuesta.value.toLowerCase());
+          var audioEliminar = audios.indexOf(audios[index]);
+          console.log("Indice del audio a eliminar: "+audioEliminar);
+          audios.splice(audioEliminar,1);
+          console.log(audios);
           respuesta.value="";
-          audios.splice(palabra,1);
-          console.log(palabra);
           var letras = document.querySelector("lista-palabras").shadowRoot.getElementById(palabra);
           letras.style.visibility="hidden";
           tic.play();
-          index++;
-          pasar();
-          aciertos++;
+          index = audioEliminar+1;
+          reproducir();
+          console.log("número de aciertos: "+aciertos);
+        }else{
+          window.alert("has ganado");
+        }  
       }
     }
   });
@@ -125,12 +133,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   botonPasar.addEventListener("click", pasar);
 
+if(aciertos===objetivo){
+  window.alert("has ganado");
+}
+
 });//Fin DOMContentLoaded
 
 
 function reproducir(){
+  if (index >= audios.length) {
+    index = 0;
+}
     var audioActual = audios[index];
-    console.log(audioActual)
+    console.log(audioActual);
+    console.log(audios.indexOf(audioActual));
     audioActual.play();
 }
 
