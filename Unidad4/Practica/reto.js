@@ -13,11 +13,25 @@
 */
 
 
-lista = ["res","tur","mir"];
-respuestas = ["residuo","turquesa","mirar"];
-var audios = [];
+lista = ["ABS","CUR","ENT","GRU","LAP","LOC","OPE"];
+respuestas = ["ABSOLUTO","CURSI","ENTREGAR","GRUÑIR","LAPSUS","LOCALIZADOR","OPERATIVO"];
+var absolutoA = new Audio();
+absolutoA.src ="./audio/absoluto.mp3";
+var cursiA = new Audio();
+cursiA.src ="./audio/cursi.mp3";
+var entregarA = new Audio();
+entregarA.src ="./audio/entregar.mp3";
+var gruñirA = new Audio();
+gruñirA.src ="./audio/gruñir.mp3";
+var lapsusA = new Audio();
+lapsusA.src = "./audio/lapsus.mp3";
+var localizadorA = new Audio();
+localizadorA.src = "./audio/localizador.mp3";
+var operativoA = new Audio();
+operativoA.src = "./audio/operativo.mp3";
+var audios = [absolutoA,cursiA,entregarA,gruñirA,lapsusA,localizadorA,operativoA];
 var tic = new Audio();
-tic.src="./audio/tic1.mp3";
+tic.src ="./audio/tic1.mp3";
 const objetivo = 7;
 var aciertos = 0;
 var index = 0;
@@ -87,28 +101,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
     requestAnimationFrame(showTime);
   })();
 
-//reproducir();
+  reproducir();
 
   var respuesta = document.getElementById("respuesta");
 
   respuesta.addEventListener("input", function() {
     for(palabra in respuestas) {
-      if(respuestas[palabra] == respuesta.value){
+      if(respuestas[palabra] == respuesta.value.toUpperCase()){
           respuesta.value="";
+          audios.splice(palabra,1);
+          console.log(palabra);
           var letras = document.querySelector("lista-palabras").shadowRoot.getElementById(palabra);
           letras.style.visibility="hidden";
           tic.play();
+          index++;
+          pasar();
           aciertos++;
       }
     }
   });
 
+  var botonPasar = document.getElementById("pasar");
+
+  botonPasar.addEventListener("click", pasar);
+
 });//Fin DOMContentLoaded
 
 
 function reproducir(){
-    audio.src = audios[index];
-    audio.play();
+    var audioActual = audios[index];
+    console.log(audioActual)
+    audioActual.play();
 }
 
 
@@ -145,9 +168,8 @@ function check(){
 
 function pasar(){
     index++;
-    if (index > 7) {
+    if (index >= audios.length) {
         index = 0;
     }
-    audio.src = audios[index];
     reproducir();
 }
