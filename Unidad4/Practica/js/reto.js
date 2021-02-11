@@ -16,22 +16,22 @@
 lista = ["ABS","CUR","ENT","GRU","LAP","LOC","OPE"];
 respuestas = ["ABSOLUTO","CURSI","ENTREGAR","GRUÑIR","LAPSUS","LOCALIZADOR","OPERATIVO"];
 var absolutoA = new Audio();
-absolutoA.src ="./audio/absoluto.mp3";
+absolutoA.src ="../audio/absoluto.mp3";
 var cursiA = new Audio();
-cursiA.src ="./audio/cursi.mp3";
+cursiA.src ="../audio/cursi.mp3";
 var entregarA = new Audio();
-entregarA.src ="./audio/entregar.mp3";
+entregarA.src ="../audio/entregar.mp3";
 var gruñirA = new Audio();
-gruñirA.src ="./audio/gruñir.mp3";
+gruñirA.src ="../audio/gruñir.mp3";
 var lapsusA = new Audio();
-lapsusA.src = "./audio/lapsus.mp3";
+lapsusA.src = "../audio/lapsus.mp3";
 var localizadorA = new Audio();
-localizadorA.src = "./audio/localizador.mp3";
+localizadorA.src = "../audio/localizador.mp3";
 var operativoA = new Audio();
-operativoA.src = "./audio/operativo.mp3";
+operativoA.src = "../audio/operativo.mp3";
 var audios = [absolutoA,cursiA,entregarA,gruñirA,lapsusA,localizadorA,operativoA];
 var tic = new Audio();
-tic.src ="./audio/tic1.mp3";
+tic.src ="../audio/tic.mp3";
 const objetivo = 7;
 var aciertos = 0;
 var index = 0;
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   //TIMER
   (function() {
-    const endTime = new Date().getTime()+2*60000;
+    const endTime = new Date().getTime()+1.5*60000;
     
     function getRemainingTime(deadline) {
       const currentTime = new Date().getTime();
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         requestAnimationFrame(showTime);
       }else{
         cancelAnimationFrame(showTime);
+        window.alert("¡La próxima vez será!")
       }
     }
     requestAnimationFrame(showTime);
@@ -123,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           reproducir();
           console.log("número de aciertos: "+aciertos);
         }else{
-          window.alert("has ganado");
+          window.alert("¡Felicidades, has ganado!");
         }  
       }
     }
@@ -133,12 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   botonPasar.addEventListener("click", pasar);
 
-if(aciertos===objetivo){
-  window.alert("has ganado");
-}
-
 });//Fin DOMContentLoaded
-
 
 function reproducir(){
   if (index >= audios.length) {
@@ -148,38 +144,6 @@ function reproducir(){
     console.log(audioActual);
     console.log(audios.indexOf(audioActual));
     audioActual.play();
-}
-
-
-function jugar(){
-  
-  if (aciertos != objetivo){
-    var respuesta = document.getElementById("respuesta").value;
-    reproducir();
-    check(respuesta);
-  }else{
-    window.alert("has ganado");
-  }
-/*
-    do {
-        reproducir();
-        var respuesta = queryselector(input);
-        check(respuesta);
-    } while (aciertos==objetivo);
-    */
-}
-
-function check(){
-    for(palabra in lista) {
-
-        if(lista[palabra] == input){
-            queryslector(divConLetrasDeLaQueAcierta).style.visibility=hidden;
-            aciertos++;
-        }else{
-            //limpiar input
-            pasar();
-        }
-    }
 }
 
 function pasar(){

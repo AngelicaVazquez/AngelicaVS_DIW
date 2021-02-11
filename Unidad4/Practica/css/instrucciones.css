@@ -1,0 +1,49 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.fondo {
+    height: 100%;
+    margin: 0;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 3s ease-in-out; 
+    filter: blur(20px);
+}
+
+#menu {
+    background-color: rgb(88, 88, 88);
+    background-color: rgba(87, 87, 87, 0.4);
+    color: white;
+    font-size: larger;
+    letter-spacing: 0.01rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 60%;
+    padding: 5rem;
+    text-align: center;
+    word-wrap: break-word;
+    transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+  }
+
+input[type=submit] {
+    background: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    color: rgb(240, 78, 78);
+    border: none;
+}
+#jugar {
+    cursor: pointer;
+}

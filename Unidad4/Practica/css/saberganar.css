@@ -1,6 +1,6 @@
 @font-face {
     font-family: principal;
-    src: url(./fonts/Coda_Caption/CodaCaption-ExtraBold.ttf);
+    src: url(../fonts/Coda_Caption/CodaCaption-ExtraBold.ttf);
   }
 
 body,html {
@@ -11,7 +11,7 @@ body,html {
 .fondo {
     height: 100%;
     margin: 0;
-    background-image: url("./img/fondo.jpg");
+    background-image: url("../img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
