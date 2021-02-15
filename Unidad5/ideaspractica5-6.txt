@@ -1,0 +1,12 @@
+para quitar la música hacer un menú que esté más o menos escondido a la izqda
+
+animación: banner que cambia todo el rato, se mueve hacia la derecha y va perdiendo opacidad hasta cero, luego aparece por la izqda con opacidad cero y su opacidad 100% es sólo cuando está en medio de la página. Desplazamiento infinito (cambiar el tamaño de la img tb¿? hay que meter más propiedades)
+
+transición: mouseover (o hover) algún div de producto -> usar propiedades transition // también cuando "aparece" menú de la música
+
+
+video de youtube el primero (a la izqda y a su derecha un texto)
+debajo video nuestro ogv (a la derecha y a su izqda un texto)
+debajo de los videos poner los productos (también puedo probar a poner los productos entre los videos...)
+
+tabindex
