@@ -1,13 +1,40 @@
-* {
-    margin:0;
-    padding:0;
-}
-
-#grid-body {
-    
+.grid-body {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-rows: 8rem 6rem 6rem;
 }
 
 header {
-    height: 5em;
-    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+nav {
+    display: grid;
+}
+
+main {
+    display: grid;
+}
+
+footer {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
 }
