@@ -23,9 +23,18 @@
         <header>
             <div id="logo">
                 <picture>
-                    <source media="(min-width: 1024px)" srcset="img/logo.webp, img/logo@1.5x.png 1.5x, img/logo@2x.webp 2x">
-                    <source media="(min-width: 620px)" srcset="img/logoSmall.png, img/logoSmall@1.5x.png 1.5x, img/logoSmall@2x.png 2x">
-                    <img src="img/logo.png" srcset="img/logo@1.5x.png 1.5x, img/logo@2x.png 2x" alt="logo">
+                    <source
+                        type="image/webp"
+                        media="(min-width: 1024px)"
+                        sizes="(min-width: 620px)65vw,80vw"
+                        srcset="img/logo.webp 400w,
+                                img/logo.png 800w,
+                                img/logo.webp 1200w">
+                    <img
+                        src="img/logo.png" alt="logo"
+                        sizes="80vw"
+                        srcset="img/logo.png 400w,
+                                img/logo.png 1200w">
                 </picture>
             </div>
             <nav class="topnav" id="myTopnav">

@@ -38,12 +38,6 @@ header {
     align-items: center;
     z-index: 3;
 }
-#logo > img {
-    margin-top: 5px;
-    width: 6rem;
-    height: 4rem;
-    filter: brightness(100);
-}
 
 /*Navbar*/
 .topnav {
