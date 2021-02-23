@@ -1,11 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Practica 3</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="grid-body">
         <header>
             <nav>
@@ -15,6 +29,81 @@
         <main></main>
         <footer>
             <div class="separator">Footer</div>
+=======
+    <div id="grid-body">
+        <header>
+            <div id="logo"><img src="img/logo.png" alt="logo"></div>
+            <nav class="topnav" id="myTopnav">
+                <a href="#topBrands">Top Brands<span class="tooltiptext"><ul><li>TRESemmé</li><li>Schwarzkopf</li><li>Moroccanoil</li><li>Salerm 21</li><li>Afro Love</li><li>Eco Styling Gel</li></ul></span></a>
+                <a href="#discover">Discover</a>
+                <a href="#vegan">Vegan</a>
+                <a href="#shampoo">Shampoo</a>
+                <a href="#conditioner">Conditioner</a>
+                <a href="#treatment">Treatment</a>
+                <a href="#leaveIn">Leave-in</a>
+                <a href="#styling">Styling</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <div class="banner">
+                <img src="img/banner.png" alt="banner">
+            </div>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            <div class="products">
+                <div><p class="title">Botanical shampoo</p><p class="price">KuiCu<br>$ 14.90</p></div>
+                <div><p class="title">Hair mask</p><p class="price">Daviness<br>$ 30.0</p></div>
+                <div><p class="title">Hair conditioner</p><p class="price">Natural Tech<br>$ 10.50</p></div>
+                <div><p class="title">Oil-absolute</p><p class="price">Daviness<br>$ 9.90</p></div>
+                <div><p class="title">Leave-in conditioner</p><p class="price">Roger More<br>$ 14.70</p></div>
+            </div>
+        </main>
+        <footer>
+            <div class="separator">WASH&GO<br>beauty</div>
+            <div id="flex-footer">
+                <div class="info">
+                    <table>
+                        <tr>
+                            <td>PRIVACY POLICY</td>
+                            <td>SHIPPING INFO</td>
+                        </tr>
+                        <tr>
+                            <td>TERMS & CONDITIONS</td>
+                            <td>RETURN / EXCHANGES</td>
+                        </tr>
+                        <tr>
+                            <td>ABOUT</td>
+                            <td>CONTACT</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="social">
+                    <div class="vLine"></div>
+                    <div class="socialImg">
+                        <img src="img/facebook.png" alt="Photo" />
+                        <img src="img/twitter.png" alt="Photo" />
+                        <img src="img/instagram.png" alt="Photo" />
+                        <img src="img/google.png" alt="Photo" />
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                    <form action="/action_page.php">
+                        <label for="email">Email address</label><br>
+                        <input type="email" id="email" name="email">
+                        <input type="submit" value="SUBSCRIBE">
+                    </form> 
+                </div>
+            </div>
+>>>>>>> 481e180e40897e343b4d4f34c665e685ef2aed7a
         </footer>
     </div>
 </body>
